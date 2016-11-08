@@ -13,5 +13,9 @@ main = do
               leaf $ do
                 parent "ee" "ff"
                 parent "gg" "hh"
+              label "cckk" mempty
+              label "cckk" $ do
+                font "cc"
+                size "100"
 
   B.putStrLn $ encode v

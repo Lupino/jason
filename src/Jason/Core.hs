@@ -8,6 +8,8 @@ module Jason.Core
   , album
   , align
   , author
+  , autocapitalize
+  , autocorrect
   , background
   , badge
   , body
@@ -18,7 +20,9 @@ module Jason.Core
   , colorDiabaled
   , components
   , contentType
+  , coord
   , cornerRadius
+  , css
   , dataRow
   , dataType
   , data_
@@ -51,18 +55,24 @@ module Jason.Core
   , name
   , options
   , padding
+  , pins
   , placeholder
+  , placeholderColor
   , position
   , pull
   , quality
+  , region
   , repeats
   , resize
   , right
   , rotate
   , search
   , sections
+  , secure
+  , selected
   , show_
   , size
+  , spellcheck
   , style
   , styleRow
   , styles
@@ -79,6 +89,7 @@ module Jason.Core
   , trigger
   , type_
   , url
+  , value
   , view
   , width
   , zIndex
@@ -105,6 +116,12 @@ align = parent "align"
 
 author :: Jason -> Jason
 author = parent "author"
+
+autocapitalize :: Jason -> Jason
+autocapitalize = parent "autocapitalize"
+
+autocorrect :: Jason -> Jason
+autocorrect = parent "autocorrect"
 
 background :: Jason -> Jason
 background = parent "background"
@@ -136,8 +153,14 @@ components = arrayParent "components"
 contentType :: Jason -> Jason
 contentType = parent "content_type"
 
+coord :: Jason -> Jason
+coord = parent "coord"
+
 cornerRadius :: Jason -> Jason
 cornerRadius = parent "corner_radius"
+
+css :: Jason -> Jason
+css = parent "css"
 
 dataRow :: Text -> Jason -> Jason
 dataRow = parent
@@ -235,8 +258,14 @@ options = parent "options"
 padding :: Jason -> Jason
 padding = parent "padding"
 
+pins :: Jason -> Jason
+pins = arrayParent "pins"
+
 placeholder :: Jason -> Jason
 placeholder = parent "placeholder"
+
+placeholderColor :: Jason -> Jason
+placeholderColor = parent "placeholder_color"
 
 position :: Jason -> Jason
 position = parent "position"
@@ -246,6 +275,9 @@ pull = parent "$pull"
 
 quality :: Jason -> Jason
 quality = parent "quality"
+
+region :: Jason -> Jason
+region = parent "region"
 
 repeats :: Jason -> Jason
 repeats = parent "repeats"
@@ -265,11 +297,20 @@ search = parent "search"
 sections :: Jason -> Jason
 sections = arrayParent "sections"
 
+secure :: Jason -> Jason
+secure = parent "secure"
+
+selected :: Jason -> Jason
+selected = parent "selected"
+
 show_ :: Jason -> Jason
 show_ = parent "$show"
 
 size :: Jason -> Jason
 size = parent "size"
+
+spellcheck :: Jason -> Jason
+spellcheck = parent "spellcheck"
 
 style :: Jason -> Jason
 style = parent "style"
@@ -318,6 +359,9 @@ type_ = parent "type"
 
 url :: Jason -> Jason
 url = parent "url"
+
+value :: Jason -> Jason
+value = parent "value"
 
 view :: Jason -> Jason
 view = parent "view"

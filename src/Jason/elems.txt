@@ -85,3 +85,16 @@ templateRow ref ref
 dataRow ref ref
 items items array
 components components array
+placeholderColor placeholder_color
+autocorrect
+background
+autocapitalize
+spellcheck
+placeholder
+secure
+css
+region
+pins pins array
+coord
+selected
+value

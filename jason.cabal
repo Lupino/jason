@@ -17,6 +17,8 @@ library
   hs-source-dirs:      src
   exposed-modules:     Jason
                      , Jason.Internal
+                     , Jason.Core
+                     , Jason.Component
   build-depends:       base >= 4.7 && < 5
                      , containers
                      , unordered-containers
