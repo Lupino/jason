@@ -1,0 +1,87 @@
+jason $jason
+head
+body
+title
+description
+icon
+styles
+actions
+templates
+data_ data
+type_ type
+style
+font
+size
+color
+padding
+class_ class
+action
+options
+success
+error_ error
+trigger
+text_ text
+url
+method
+load $load
+show_ $show
+foreground $foreground
+pull $pull
+template
+transition
+view
+href
+header
+dataType data_type
+contentType content_type
+quality
+domain
+fileUrl file_url
+edit
+muted
+author
+album
+image
+position
+theme
+distance
+interval
+name
+repeats
+footer
+search
+placeholder
+background
+menu
+badge
+top
+left
+zIndex z_index
+width
+height
+padding
+top
+left
+right
+bottom
+cornerRadius corner_radius
+font
+size
+background
+color
+align
+resize
+move
+rotate
+input
+tabs
+colorDiabaled color:disabled
+border
+sections sections array
+layers layers array
+styleRow ref ref
+actionRow ref ref
+templateRow ref ref
+dataRow ref ref
+items items array
+components components array
