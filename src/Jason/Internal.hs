@@ -103,7 +103,7 @@ isEmpty Empty = True
 isEmpty _     = False
 
 (?) :: (JasonM a -> JasonM b) -> JasonM a -> JasonM b
-f ? g | isEmpty g = mempty
+f ? g | isEmpty g = Empty
       | otherwise = f g
 
 
@@ -131,4 +131,4 @@ renderJasonM _   (Leaf c)          = renderJasonM False c
 renderJasonM _   (ArrayLeaf c)     = renderJasonM True c
 renderJasonM _   (Content c)       = toJSON c
 renderJasonM _   (Raw c)           = c
-renderJasonM _   Empty           = Null
+renderJasonM _   Empty             = Null
