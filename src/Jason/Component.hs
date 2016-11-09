@@ -2,8 +2,7 @@
 
 module Jason.Component
   (
-    (?)
-  , label
+    label
   , image_
   , button
   , textfield
@@ -17,10 +16,6 @@ module Jason.Component
 import           Data.Text      (Text)
 import           Jason.Core
 import           Jason.Internal
-
-(?) :: (Jason -> Jason) -> Jason -> Jason
-f ? g | isEmpty g = mempty
-      | otherwise = f g
 
 label :: Text -> Jason -> Jason
 label txt sty = leaf $ do

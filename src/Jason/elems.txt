@@ -23,6 +23,7 @@ dataRow ref ref
 dataType data_type
 data_ data
 description
+distribution
 distance
 domain
 edit
@@ -69,6 +70,7 @@ selected
 show_ $show
 size
 spellcheck
+spacing
 style
 styleRow ref ref
 styles

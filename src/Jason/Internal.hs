@@ -13,6 +13,7 @@ module Jason.Internal
   , leaf
   , arrayLeaf
   , isEmpty
+  , (?)
   , renderJasonM
   ) where
 
@@ -100,6 +101,11 @@ arrayLeaf = ArrayLeaf
 isEmpty :: JasonM a -> Bool
 isEmpty Empty = True
 isEmpty _     = False
+
+(?) :: (JasonM a -> JasonM b) -> JasonM a -> JasonM b
+f ? g | isEmpty g = mempty
+      | otherwise = f g
+
 
 unionValue :: Value -> Value -> Value
 unionValue (Object a) (Object b) = Object $ union a b

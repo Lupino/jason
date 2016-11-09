@@ -7,3 +7,4 @@ module Jason
 import           Jason.Component as X
 import           Jason.Core      as X
 import           Jason.Internal  as X
+import           Jason.Layout    as X
