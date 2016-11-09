@@ -1,100 +1,91 @@
-jason $jason
-head
-body
-title
-description
-icon
-styles
-actions
-templates
-data_ data
-type_ type
-style
-font
-size
-color
-padding
-class_ class
 action
-options
-success
-error_ error
-trigger
-text_ text
-url
-method
-load $load
-show_ $show
-foreground $foreground
-pull $pull
-template
-transition
-view
-href
-header
-dataType data_type
-contentType content_type
-quality
-domain
-fileUrl file_url
-edit
-muted
-author
-album
-image
-position
-theme
-distance
-interval
-name
-repeats
-footer
-search
-placeholder
-background
-menu
-badge
-top
-left
-zIndex z_index
-width
-height
-padding
-top
-left
-right
-bottom
-cornerRadius corner_radius
-font
-size
-background
-color
-align
-resize
-move
-rotate
-input
-tabs
-colorDiabaled color:disabled
-border
-sections sections array
-layers layers array
-styleRow ref ref
 actionRow ref ref
-templateRow ref ref
-dataRow ref ref
-items items array
-components components array
-placeholderColor placeholder_color
+actions
+album
+align
+author
+autocapitalize
 autocorrect
 background
-autocapitalize
-spellcheck
-placeholder
-secure
-css
-region
-pins pins array
+badge
+body
+border
+bottom
+class_ class
+color
+colorDiabaled color:disabled
+components components array
+contentType content_type
 coord
+cornerRadius corner_radius
+css
+dataRow ref ref
+dataType data_type
+data_ data
+description
+distance
+domain
+edit
+error_ error
+fileUrl file_url
+font
+footer
+foreground $foreground
+head
+header
+height
+href
+icon
+image
+input
+interval
+items items array
+jason $jason
+layers layers array
+left
+load $load
+menu
+method
+move
+muted
+name
+options
+padding
+pins pins array
+placeholder
+placeholderColor placeholder_color
+position
+pull $pull
+quality
+region
+repeats
+resize
+right
+rotate
+search
+sections sections array
+secure
 selected
+show_ $show
+size
+spellcheck
+style
+styleRow ref ref
+styles
+success
+tabs
+template
+templateRow ref ref
+templates
+text_ text
+theme
+title
+top
+transition
+trigger
+type_ type
+url
 value
+view
+width
+zIndex z_index
