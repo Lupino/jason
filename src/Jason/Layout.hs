@@ -11,15 +11,14 @@ import           Data.Text      (Text)
 import           Jason.Core
 import           Jason.Internal
 
--- layout layout components style
-layout :: Text -> Jason -> Jason -> Jason
-layout t c s = leaf $ do
+-- layout layout components extra
+layout :: Text -> Jason -> Jason
+layout t extra = leaf $ do
   type_ $ text t
-  components c
-  style ? s
+  extra
 
-vertical :: Jason -> Jason -> Jason
+vertical :: Jason -> Jason
 vertical = layout "vertical"
 
-horizontal :: Jason -> Jason -> Jason
+horizontal :: Jason -> Jason
 horizontal = layout "horizontal"

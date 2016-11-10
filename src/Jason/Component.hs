@@ -17,50 +17,53 @@ import           Data.Text      (Text)
 import           Jason.Core
 import           Jason.Internal
 
+-- label label extra
 label :: Text -> Jason -> Jason
-label txt sty = leaf $ do
+label txt extra = leaf $ do
   type_ "label"
   text_ $ text txt
-  style ? sty
+  extra
 
+-- image_ url     extra
 image_ :: Text -> Jason -> Jason
-image_ txt sty = leaf $ do
+image_ txt extra = leaf $ do
   type_ "image"
   text_ $ text txt
-  style ? sty
+  extra
 
+-- button name    extra
 button :: Text -> Jason -> Jason
-button txt sty = leaf $ do
+button txt extra = leaf $ do
   type_ "button"
   text_ $ text txt
-  style ? sty
+  extra
 
--- textfield name    value placeholder style
+-- textfield name    value placeholder extra
 textfield :: Text -> Jason -> Jason -> Jason -> Jason
-textfield n v p sty = leaf $ do
+textfield n v p extra = leaf $ do
   type_ "textfield"
   name $ text n
   value ? v
   placeholder ? p
-  style ? sty
+  extra
 
--- textarea name    value placeholder style
+-- textarea name    value placeholder extra
 textarea :: Text -> Jason -> Jason -> Jason -> Jason
-textarea n v p sty = leaf $ do
+textarea n v p extra = leaf $ do
   type_ "textarea"
   name $ text n
   value ? v
   placeholder ? p
-  style ? sty
+  extra
 
--- slider name    value    action   style
+-- slider name    value    action   extra
 slider :: Text -> Jason -> Jason -> Jason -> Jason
-slider n v a sty = leaf $ do
+slider n v a extra = leaf $ do
   type_ "slider"
   name $ text n
   value ? v
   action ? a
-  style ? sty
+  extra
 
 -- html text css
 html :: Text -> Jason -> Jason
@@ -69,16 +72,16 @@ html t c = leaf $ do
   text_ $ text t
   css ? c
 
--- space style
+-- space extra
 space :: Jason -> Jason
-space sty = leaf $ do
+space extra = leaf $ do
   type_ "space"
-  style ? sty
+  extra
 
--- map region pins style
+-- map region pins extra
 map_ :: Jason -> Jason -> Jason -> Jason
-map_ r p s = leaf $ do
+map_ r p extra = leaf $ do
   type_ "map"
   region r
   pins ? p
-  style ? s
+  extra
