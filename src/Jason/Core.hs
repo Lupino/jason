@@ -58,6 +58,7 @@ module Jason.Core
   , input
   , interval
   , items
+  , items_
   , jason
   , layers
   , left
@@ -497,6 +498,12 @@ interval = parent "interval"
 --          edit elems.txt and run `python3 generater.py` to regenerate.
 items :: Jason -> Jason
 items = arrayParent "items"
+
+-- generate object items_
+-- WARNING: this file is generate by generater.py, do not change.
+--          edit elems.txt and run `python3 generater.py` to regenerate.
+items_ :: Jason -> Jason
+items_ = parent "items"
 
 -- generate object jason
 -- WARNING: this file is generate by generater.py, do not change.
