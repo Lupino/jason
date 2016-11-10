@@ -14,7 +14,7 @@ app = jason $ do
     title "Hello World"
     description "This app displays 'Hello World' on the screen"
     styles $
-      styleRow "styled_row" $ do
+      "styled_row" .== do
         font "HelveticaNeue"
         size "20"
         color "#ff0000"

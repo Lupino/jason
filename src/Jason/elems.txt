@@ -1,5 +1,4 @@
 action
-actionRow ref ref
 actions
 album
 align
@@ -19,7 +18,6 @@ contentType content_type
 coord
 cornerRadius corner_radius
 css
-dataRow ref ref
 dataType data_type
 data_ data
 description
@@ -72,12 +70,10 @@ size
 spellcheck
 spacing
 style
-styleRow ref ref
 styles
 success
 tabs
 template
-templateRow ref ref
 templates
 text_ text
 theme

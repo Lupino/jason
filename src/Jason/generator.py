@@ -37,10 +37,6 @@ for line in lines:
         output.append('{} :: Jason -> Jason'.format(k))
         output.append('{} = arrayParent "{}"'.format(k, v))
 
-    if t == 'ref':
-        output.append('{} :: Text -> Jason -> Jason'.format(k))
-        output.append('{} = parent'.format(k))
-
     if t == 'api':
         output.append('{} :: Jason -> Jason'.format(k))
         output.append('{} extra = leaf $ do'.format(k))

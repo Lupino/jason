@@ -3,7 +3,6 @@
 module Jason.Core
   (
     action
-  , actionRow
   , actions
   , album
   , align
@@ -36,7 +35,6 @@ module Jason.Core
   , coord
   , cornerRadius
   , css
-  , dataRow
   , dataType
   , data_
   , description
@@ -102,12 +100,10 @@ module Jason.Core
   , spacing
   , spellcheck
   , style
-  , styleRow
   , styles
   , success
   , tabs
   , template
-  , templateRow
   , templates
   , text_
   , theme
@@ -141,12 +137,6 @@ import           Prelude        hiding (head)
 --          edit elems.txt and run `python3 generater.py` to regenerate.
 action :: Jason -> Jason
 action = parent "action"
-
--- generate ref actionRow
--- WARNING: this file is generate by generater.py, do not change.
---          edit elems.txt and run `python3 generater.py` to regenerate.
-actionRow :: Text -> Jason -> Jason
-actionRow = parent
 
 -- generate object actions
 -- WARNING: this file is generate by generater.py, do not change.
@@ -365,12 +355,6 @@ cornerRadius = parent "corner_radius"
 --          edit elems.txt and run `python3 generater.py` to regenerate.
 css :: Jason -> Jason
 css = parent "css"
-
--- generate ref dataRow
--- WARNING: this file is generate by generater.py, do not change.
---          edit elems.txt and run `python3 generater.py` to regenerate.
-dataRow :: Text -> Jason -> Jason
-dataRow = parent
 
 -- generate object dataType
 -- WARNING: this file is generate by generater.py, do not change.
@@ -788,12 +772,6 @@ spellcheck = parent "spellcheck"
 style :: Jason -> Jason
 style = parent "style"
 
--- generate ref styleRow
--- WARNING: this file is generate by generater.py, do not change.
---          edit elems.txt and run `python3 generater.py` to regenerate.
-styleRow :: Text -> Jason -> Jason
-styleRow = parent
-
 -- generate object styles
 -- WARNING: this file is generate by generater.py, do not change.
 --          edit elems.txt and run `python3 generater.py` to regenerate.
@@ -817,12 +795,6 @@ tabs = parent "tabs"
 --          edit elems.txt and run `python3 generater.py` to regenerate.
 template :: Jason -> Jason
 template = parent "template"
-
--- generate ref templateRow
--- WARNING: this file is generate by generater.py, do not change.
---          edit elems.txt and run `python3 generater.py` to regenerate.
-templateRow :: Text -> Jason -> Jason
-templateRow = parent
 
 -- generate object templates
 -- WARNING: this file is generate by generater.py, do not change.
