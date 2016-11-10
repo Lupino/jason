@@ -5,7 +5,11 @@ lines.sort()
 defines = []
 output = []
 
+def strip(line):
+    return [l for l in line if line]
+
 for line in lines:
+    line = strip(line)
     k = line[0]
     v = line[0]
     t = 'object'
@@ -22,6 +26,9 @@ for line in lines:
     defines.append(k)
     output.append('')
 
+    output.append('-- generate {} {}'.format(t, k))
+    output.append('-- WARNING: this file is generate by generater.py, do not change.')
+    output.append('--          edit elems.txt and run `python3 generater.py` to regenerate.')
     if t == 'object':
         output.append('{} :: Jason -> Jason'.format(k))
         output.append('{} = parent "{}"'.format(k, v))
@@ -33,6 +40,12 @@ for line in lines:
     if t == 'ref':
         output.append('{} :: Text -> Jason -> Jason'.format(k))
         output.append('{} = parent'.format(k))
+
+    if t == 'api':
+        output.append('{} :: Jason -> Jason'.format(k))
+        output.append('{} extra = leaf $ do'.format(k))
+        output.append('  type_ "{}"'.format(v))
+        output.append('  extra')
 
 fp = open('Core.hs', 'w')
 

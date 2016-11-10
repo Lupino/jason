@@ -91,3 +91,38 @@ value
 view
 width
 zIndex z_index
+reload $reload api
+render $render api
+snapshot $snapshot api
+href_ $href api
+close $close api
+back $back api
+networkRequest $network.request api
+networkUpload $network.upload api
+sessionSet $session.set api
+sessionReset $session.reset api
+set $set api
+cacheSet $cache.set api
+cacheReset $cache.reset api
+utilBanner $util.banner api
+utilToast $util.toast api
+utilAlert $util.alert api
+utilShare $util.share api
+utilPicker $util.picker api
+utilDatepicker $util.datepicker api
+utilAddressbook $util.addressbook api
+mediaCamera   $media.camera api
+mediaPicker   $media.picker api
+mediaPlay     $media.play api
+audioPlay     $audio.play api
+audioPause    $audio.pause api
+audioStop     $audio.stop api
+audioSeek     $audio.seek api
+audioPosition $audio.position api
+audioDuration $audio.duration api
+audioRecord   $audio.record api
+geoGet        $geo.get api
+timerStart    $timer.start api
+timerStop     $timer.stop api
+convertCsv    $convert.csv api
+convertRss    $convert.rss api
