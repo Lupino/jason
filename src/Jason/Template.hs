@@ -27,8 +27,8 @@ if_ v = parent (var $ "#if (" `append` v `append` ")")
 elseif_ :: Text -> Jason -> Jason
 elseif_ v = parent (var $ "#elseif (" `append` v `append` ")")
 
-else_ :: Text -> Jason -> Jason
-else_ v = parent (var $ "#else (" `append` v `append` ")")
+else_ :: Jason -> Jason
+else_ v = parent (var $ "#else")
 
 this :: Jason
 this = text $ var "this"
