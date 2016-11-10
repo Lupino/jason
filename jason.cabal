@@ -19,6 +19,8 @@ library
                      , Jason.Internal
                      , Jason.Core
                      , Jason.Component
+                     , Jason.Layout
+                     , Jason.Template
   build-depends:       base >= 4.7 && < 5
                      , containers
                      , unordered-containers
