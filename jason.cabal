@@ -1,5 +1,5 @@
 name:                jason
-version:             0.1.0.0
+version:             0.1.0.1
 synopsis:            A fast JASONETTE-iOS JSON combinator library for haskell.
 description:         Please see README.md
 homepage:            https://github.com/Lupino/jason#readme
