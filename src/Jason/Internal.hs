@@ -15,6 +15,7 @@ module Jason.Internal
   , isEmpty
   , (?)
   , (.==)
+  , (.--)
   , renderJasonM
   ) where
 
@@ -109,6 +110,9 @@ f ? g | isEmpty g = Empty
 
 (.==) :: Text -> JasonM a -> JasonM a
 k .== v = parent k v
+
+(.--) :: Text -> JasonM a -> JasonM a
+k .-- v = arrayParent k v
 
 unionValue :: Value -> Value -> Value
 unionValue (Object a) (Object b) = Object $ union a b
