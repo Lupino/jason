@@ -32,11 +32,11 @@ elseif_ v = parent (var $ "#elseif (" `append` v `append` ")")
 else_ :: Jason -> Jason
 else_ = parent (var "#else")
 
-this :: Jason
-this = text $ var "this"
+this :: Text
+this = var "this"
 
-get :: Text -> Jason
-get t = text $ var ("$get." `append` t)
+get :: Text -> Text
+get t = var ("$get." `append` t)
 
-cache :: Text -> Jason
-cache t = text $ var ("$cache." `append` t)
+cache :: Text -> Text
+cache t = var ("$cache." `append` t)
