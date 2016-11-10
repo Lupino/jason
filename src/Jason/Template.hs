@@ -8,6 +8,8 @@ module Jason.Template
   , elseif_
   , else_
   , this
+  , get
+  , cache
   ) where
 
 import           Data.Text      (Text, append, concat)
