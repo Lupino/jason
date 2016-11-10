@@ -1,6 +1,6 @@
 name:                jason
 version:             0.1.0.0
-synopsis:            Initial project template from stack
+synopsis:            A fast JASONETTE-iOS JSON combinator library for haskell.
 description:         Please see README.md
 homepage:            https://github.com/Lupino/jason#readme
 license:             BSD3
