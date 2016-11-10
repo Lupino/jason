@@ -122,13 +122,25 @@ unionArray a1         Null       = Array $ empty `snoc` a1
 unionArray a1         a2         = Array $ empty `snoc` a1 `snoc` a2
 
 renderJasonM :: Bool -> JasonM a -> Value
-renderJasonM _   (Parent t c)      = object [ t .= renderJasonM False c ]
-renderJasonM _   (ArrayParent t c) = object [ t .= renderJasonM True c ]
-renderJasonM arr (Append c1 c2)    = union' (renderJasonM arr c1) (renderJasonM arr c2)
-  where union' = if arr then unionArray else unionValue
+renderJasonM True  = renderArray
+renderJasonM False = renderValue
 
-renderJasonM _   (Leaf c)          = renderJasonM False c
-renderJasonM _   (ArrayLeaf c)     = renderJasonM True c
-renderJasonM _   (Content c)       = toJSON c
-renderJasonM _   (Raw c)           = c
-renderJasonM _   Empty             = Null
+renderValue :: JasonM a -> Value
+renderValue (Parent t c)      = object [ t .= renderValue c ]
+renderValue (ArrayParent t c) = object [ t .= renderArray c ]
+renderValue (Append c1 c2)    = unionValue (renderValue c1) (renderValue c2)
+renderValue (Leaf c)          = renderValue c
+renderValue (ArrayLeaf c)     = renderArray c
+renderValue (Content c)       = toJSON c
+renderValue (Raw c)           = c
+renderValue Empty             = Null
+
+renderArray :: JasonM a -> Value
+renderArray (Parent t c)      = Array $ empty `snoc` (object [ t .= renderValue c ])
+renderArray (ArrayParent t c) = Array $ empty `snoc` (object [ t .= renderArray c ])
+renderArray (Append c1 c2)    = unionArray (renderArray c1) (renderArray c2)
+renderArray (Leaf c)          = Array $ empty `snoc` (renderValue c)
+renderArray (ArrayLeaf c)     = renderArray c
+renderArray (Content c)       = Array $ empty `snoc` (toJSON c)
+renderArray (Raw c)           = c
+renderArray Empty             = Array $ empty
