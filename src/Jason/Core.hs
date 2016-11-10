@@ -174,17 +174,21 @@ audioDuration extra = leaf $ do
   type_ "$audio.duration"
   extra
 
--- generate object audioPause
+-- generate api audioPause
 -- WARNING: this file is generate by generater.py, do not change.
 --          edit elems.txt and run `python3 generater.py` to regenerate.
 audioPause :: Jason -> Jason
-audioPause = parent ""
+audioPause extra = leaf $ do
+  type_ "$audio.pause"
+  extra
 
--- generate object audioPlay
+-- generate api audioPlay
 -- WARNING: this file is generate by generater.py, do not change.
 --          edit elems.txt and run `python3 generater.py` to regenerate.
 audioPlay :: Jason -> Jason
-audioPlay = parent ""
+audioPlay extra = leaf $ do
+  type_ "$audio.play"
+  extra
 
 -- generate api audioPosition
 -- WARNING: this file is generate by generater.py, do not change.
@@ -194,23 +198,29 @@ audioPosition extra = leaf $ do
   type_ "$audio.position"
   extra
 
--- generate object audioRecord
+-- generate api audioRecord
 -- WARNING: this file is generate by generater.py, do not change.
 --          edit elems.txt and run `python3 generater.py` to regenerate.
 audioRecord :: Jason -> Jason
-audioRecord = parent ""
+audioRecord extra = leaf $ do
+  type_ "$audio.record"
+  extra
 
--- generate object audioSeek
+-- generate api audioSeek
 -- WARNING: this file is generate by generater.py, do not change.
 --          edit elems.txt and run `python3 generater.py` to regenerate.
 audioSeek :: Jason -> Jason
-audioSeek = parent ""
+audioSeek extra = leaf $ do
+  type_ "$audio.seek"
+  extra
 
--- generate object audioStop
+-- generate api audioStop
 -- WARNING: this file is generate by generater.py, do not change.
 --          edit elems.txt and run `python3 generater.py` to regenerate.
 audioStop :: Jason -> Jason
-audioStop = parent ""
+audioStop extra = leaf $ do
+  type_ "$audio.stop"
+  extra
 
 -- generate object author
 -- WARNING: this file is generate by generater.py, do not change.
@@ -322,17 +332,21 @@ components = arrayParent "components"
 contentType :: Jason -> Jason
 contentType = parent "content_type"
 
--- generate object convertCsv
+-- generate api convertCsv
 -- WARNING: this file is generate by generater.py, do not change.
 --          edit elems.txt and run `python3 generater.py` to regenerate.
 convertCsv :: Jason -> Jason
-convertCsv = parent ""
+convertCsv extra = leaf $ do
+  type_ "$convert.csv"
+  extra
 
--- generate object convertRss
+-- generate api convertRss
 -- WARNING: this file is generate by generater.py, do not change.
 --          edit elems.txt and run `python3 generater.py` to regenerate.
 convertRss :: Jason -> Jason
-convertRss = parent ""
+convertRss extra = leaf $ do
+  type_ "$convert.rss"
+  extra
 
 -- generate object coord
 -- WARNING: this file is generate by generater.py, do not change.
@@ -430,11 +444,13 @@ footer = parent "footer"
 foreground :: Jason -> Jason
 foreground = parent "$foreground"
 
--- generate object geoGet
+-- generate api geoGet
 -- WARNING: this file is generate by generater.py, do not change.
 --          edit elems.txt and run `python3 generater.py` to regenerate.
 geoGet :: Jason -> Jason
-geoGet = parent ""
+geoGet extra = leaf $ do
+  type_ "$geo.get"
+  extra
 
 -- generate object head
 -- WARNING: this file is generate by generater.py, do not change.
@@ -522,23 +538,29 @@ left = parent "left"
 load :: Jason -> Jason
 load = parent "$load"
 
--- generate object mediaCamera
+-- generate api mediaCamera
 -- WARNING: this file is generate by generater.py, do not change.
 --          edit elems.txt and run `python3 generater.py` to regenerate.
 mediaCamera :: Jason -> Jason
-mediaCamera = parent ""
+mediaCamera extra = leaf $ do
+  type_ "$media.camera"
+  extra
 
--- generate object mediaPicker
+-- generate api mediaPicker
 -- WARNING: this file is generate by generater.py, do not change.
 --          edit elems.txt and run `python3 generater.py` to regenerate.
 mediaPicker :: Jason -> Jason
-mediaPicker = parent ""
+mediaPicker extra = leaf $ do
+  type_ "$media.picker"
+  extra
 
--- generate object mediaPlay
+-- generate api mediaPlay
 -- WARNING: this file is generate by generater.py, do not change.
 --          edit elems.txt and run `python3 generater.py` to regenerate.
 mediaPlay :: Jason -> Jason
-mediaPlay = parent ""
+mediaPlay extra = leaf $ do
+  type_ "$media.play"
+  extra
 
 -- generate object menu
 -- WARNING: this file is generate by generater.py, do not change.
@@ -820,17 +842,21 @@ text_ = parent "text"
 theme :: Jason -> Jason
 theme = parent "theme"
 
--- generate object timerStart
+-- generate api timerStart
 -- WARNING: this file is generate by generater.py, do not change.
 --          edit elems.txt and run `python3 generater.py` to regenerate.
 timerStart :: Jason -> Jason
-timerStart = parent ""
+timerStart extra = leaf $ do
+  type_ "$timer.start"
+  extra
 
--- generate object timerStop
+-- generate api timerStop
 -- WARNING: this file is generate by generater.py, do not change.
 --          edit elems.txt and run `python3 generater.py` to regenerate.
 timerStop :: Jason -> Jason
-timerStop = parent ""
+timerStop extra = leaf $ do
+  type_ "$timer.stop"
+  extra
 
 -- generate object title
 -- WARNING: this file is generate by generater.py, do not change.

@@ -6,7 +6,7 @@ defines = []
 output = []
 
 def strip(line):
-    return [l for l in line if line]
+    return [l for l in line if l]
 
 for line in lines:
     line = strip(line)
