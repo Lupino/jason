@@ -21,7 +21,7 @@ var :: Text -> Text
 var t = concat ["{{", t, "}}"]
 
 each :: Text -> Jason -> Jason
-each v = parent (var $ "#each" `append` v)
+each v = parent (var $ "#each " `append` v)
 
 if_ :: Text -> Jason -> Jason
 if_ v = parent (var $ "#if (" `append` v `append` ")")
